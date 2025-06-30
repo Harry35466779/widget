@@ -4,229 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Investment Opportunities - Robeco</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
     <style>
-        * {
+        html, body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #fff;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #1a1a1a;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
         }
-        
         .widget-container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 0;
             max-width: 700px;
-            width: 100%;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            margin: 56px auto 0 auto;
+            box-shadow: none;
+            border: none;
         }
-        
-        .widget-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-        
-        .robeco-logo {
-            color: #1a365d;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
-            opacity: 0.8;
-        }
-        
         .title {
-            font-size: 28px;
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            font-size: 38px;
             font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 30px;
-            line-height: 1.3;
-            text-align: center;
-            transition: all 0.4s ease;
+            color: #222;
+            margin-bottom: 28px;
+            line-height: 1.18;
+            text-align: left;
         }
-        
         .percentage-highlight {
-            color: #667eea;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #00a2bd;
             font-weight: 800;
-            animation: pulse 2s infinite;
         }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
         .slider-container {
-            margin: 30px 0;
-            text-align: center;
+            margin: 18px 0 0 0;
         }
-        
-        .slider-label {
-            font-size: 16px;
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
         .slider {
             width: 100%;
-            height: 8px;
-            border-radius: 5px;
-            background: linear-gradient(to right, #e2e8f0, #667eea);
+            height: 7px;
+            background: #e6f7fa;
+            border-radius: 4px;
             outline: none;
-            cursor: pointer;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
+            -webkit-appearance: none;
+            margin-bottom: 8px;
         }
-        
         .slider::-webkit-slider-thumb {
-            appearance: none;
-            width: 24px;
-            height: 24px;
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: #00a2bd;
+            box-shadow: 0 1.5px 4px rgba(0,34,40,0.12);
+            border: 3px solid #fff;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            transition: background 0.2s;
         }
-        
         .slider::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: #008fa1;
         }
-        
+        .slider::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #00a2bd;
+            border: 3px solid #fff;
+            cursor: pointer;
+        }
+        .slider::-ms-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #00a2bd;
+            border: 3px solid #fff;
+            cursor: pointer;
+        }
+        .slider:focus {
+            outline: none;
+        }
         .percentage-display {
-            font-size: 20px;
-            font-weight: bold;
-            color: #667eea;
-            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #00a2bd;
+            margin-top: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin-bottom: 18px;
+            text-align: left;
         }
-        
         .content-paragraph {
             font-size: 18px;
             line-height: 1.7;
-            color: #2d3748;
-            text-align: justify;
-            margin-top: 30px;
-            padding: 25px;
-            background: rgba(102, 126, 234, 0.05);
-            border-radius: 15px;
-            border-left: 4px solid #667eea;
-            transition: all 0.5s ease;
-            min-height: 150px;
+            color: #18344a;
+            text-align: left;
+            margin-top: 18px;
+            margin-bottom: 0;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            border: none;
+            font-family: 'Roboto', Arial, sans-serif;
+            min-height: 120px;
         }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
         .investment-highlight {
-            color: #667eea;
+            color: #00a2bd;
             font-weight: 600;
+        }
+        @media (max-width: 700px) {
+            .widget-container {
+                max-width: 98vw;
+                padding: 0 2vw;
+            }
+            .content-paragraph { padding: 0; }
+            .title { font-size: 30px; }
         }
     </style>
 </head>
 <body>
     <div class="widget-container">
-        <div class="robeco-logo">ROBECO</div>
-        
         <h2 class="title" id="dynamicTitle">
-            If we see a <span class="percentage-highlight" id="percentageInTitle">100%</span> improvement in AI year-on-year
+            If we see a <span class="percentage-highlight" id="percentageInTitle">100</span>% improvement in AI year-on-year
         </h2>
-        
         <div class="slider-container">
-            <div class="slider-label">Adjust AI Growth Projection</div>
-            <input type="range" min="0" max="12" value="9" class="slider" id="percentageSlider">
+            <input type="range" min="0" max="500" value="100" step="1" class="slider" id="smoothSlider">
             <div class="percentage-display" id="percentageDisplay">100%</div>
         </div>
-        
-        <div class="content-paragraph fade-in" id="contentParagraph">
-            At 100% year-on-year AI improvement, we're witnessing a transformative inflection point that creates unprecedented <span class="investment-highlight">investment opportunities</span> across multiple sectors. Companies leading AI development and integration are positioned for exponential growth, while traditional industries face both disruption risks and automation benefits. This growth rate suggests we're entering an era where <span class="investment-highlight">AI-driven productivity gains</span> could fundamentally reshape market valuations and create entirely new investment categories. Strategic allocation to AI-focused funds and forward-thinking companies becomes not just opportunistic, but essential for long-term portfolio resilience.
-        </div>
+        <div class="content-paragraph" id="contentParagraph"></div>
     </div>
-
     <script>
-        const slider = document.getElementById('percentageSlider');
+        // New stops and new paragraphs
+        const stops = [0, 10, 20, 30, 40, 50, 80, 100, 200, 300, 400, 500];
+       const contentTexts = {
+  0: "<b>No Progress:</b> At 0% annual AI improvement, AI technology makes no meaningful advances. The economic and investment landscape remains static, with traditional industries continuing to dominate. <span class='investment-highlight'>AI is irrelevant at this level.</span> Investors stick to legacy strategies as innovation stagnates. Human expertise goes unchallenged, and any talk of digital transformation stays a mere buzzword.",
+  10: "<b>Incremental Gains:</b> At up to 10% annual AI improvement, progress is modest and incremental. AI may deliver minor efficiency gains or automate basic tasks, but core business models remain largely unchanged. <span class='investment-highlight'>Safe, stable companies remain the default choice for investors.</span> Early adopters of AI gain only a slight edge, and the overall market still rewards conservative, low-risk strategies.",
+  20: "<b>Early Momentum:</b> At over 20% annual AI improvement, AI becomes a significant productivity driver. Companies embracing AI begin to outpace those that do not, drawing increased investor attention toward these digital leaders. <span class='investment-highlight'>Gradually shifting portfolios toward innovation proves beneficial.</span> Experimentation with AI is rewarded, and the first notable wave of white-collar automation and workforce reskilling emerges.",
+  30: "<b>Compounding Effects:</b> At over 30% annual AI improvement, the impact of AI on performance becomes unmistakable in company earnings and productivity. Firms investing heavily in AI gain accelerating advantages, while traditional businesses start to fall behind. <span class='investment-highlight'>The risk of disruption rises sharply.</span> Active, agile management is rewarded as product cycles shorten and digital expertise becomes a baseline requirement across industries.",
+  40: "<b>Disruption Phase:</b> At over 40% annual AI improvement, AI-driven disruption is widespread across the economy. Entire industries undergo rapid transformation as automation accelerates and data-driven upstarts outcompete legacy firms. <span class='investment-highlight'>Market volatility increases significantly.</span> Adaptability becomes paramount: investors look beyond traditional sectors and evaluate ecosystems, strategic partnerships, and continuous upskilling when allocating capital.",
+  50: "<b>Transformation:</b> At over 50% annual AI improvement, the pace of business and societal change becomes rapid and relentless. Virtually every sector faces dramatic upheavals, and new opportunities emerge faster than investors can easily track. <span class='investment-highlight'>Identifying and supporting agile, innovative companies becomes essential.</span> Corporate lifespans shorten, and capital flows toward organizations that prioritize continuous learning and adaptation.",
+  80: "<b>Acceleration:</b> At over 80% annual AI improvement, AI becomes a dominant force in the economy. The most advanced companies scale at unprecedented rates, and entirely new markets and business models appear almost overnight. The breakneck pace of change strains the ability of regulators and investors to keep up. <span class='investment-highlight'>Broad diversification and strategic flexibility are essential.</span> Global labor markets are radically reshaped, and many regulatory frameworks struggle to remain relevant under these conditions.",
+  100: "<b>Exponential Shift:</b> At over 100% annual AI improvement, technological progress turns exponential, fueling massive growth and a concentration of power among leading AI-driven firms. Only companies with the most advanced AI capabilities continue to thrive, while traditional sector boundaries blur or disappear entirely. <span class='investment-highlight'>Financial markets become almost unrecognizable compared to today.</span> Economic models start shifting from scarcity-based to abundance-based paradigms. Political tensions escalate over data governance, access to AI resources, and control of these powerful technologies.",
+  200: "<b>AI Dominance:</b> At over 200% annual AI improvement, compounding advances hit a tipping point that upends the economy and society almost overnight. Conventional investment logic breaks down as AI-driven decisions and automation reshape markets in real time. <span class='investment-highlight'>Traditional analysis becomes nearly meaningless\u2014AI's trajectory is everything.</span> Corporate winners and losers are decided by algorithmic prowess and data access rather than any legacy advantages. The gap between AI leaders and laggards widens into a chasm.",
+  300: "<b>Runaway Growth:</b> At over 300% annual AI improvement, technological change reaches runaway speed. Entire industries can be reinvented within months instead of years, leaving little time for traditional strategic planning. <span class='investment-highlight'>The only constant is change.</span> Investors now depend on adaptive, AI-driven strategies, as human decision-making alone struggles to keep up. New systemic risks, ethical dilemmas, and unforeseen social consequences emerge on a global scale.",
+  400: "<b>Superintelligent Era:</b> At over 400% annual AI improvement, the global landscape is dominated by superintelligent systems. Nearly all human labor becomes obsolete, and economic value creation hinges on access to advanced AI infrastructure. <span class='investment-highlight'>Risks and opportunities multiply exponentially.</span> Societal rules and institutions are rewritten to accommodate this new reality, and managing existential AI risks becomes a standard part of prudent investment strategy.",
+  500: "<b>Post-Scarcity:</b> At over 500% annual AI improvement, the very foundations of investment, economics, and society are overturned. Concepts of scarcity fade as AI-driven automation delivers overwhelming abundance. <span class='investment-highlight'>New post-scarcity models, autonomous AI-run organizations, and novel forms of value creation emerge.</span> Traditional notions of wealth, labor, and ownership are fundamentally redefined. In this world of abundance and constant reinvention, only those willing to radically adapt can survive and thrive."
+};
+        function getCurrentStop(value) {
+            for (let i = stops.length - 1; i >= 0; i--) {
+                if (value >= stops[i]) return stops[i];
+            }
+            return stops[0];
+        }
+        const smoothSlider = document.getElementById('smoothSlider');
         const percentageDisplay = document.getElementById('percentageDisplay');
         const percentageInTitle = document.getElementById('percentageInTitle');
         const contentParagraph = document.getElementById('contentParagraph');
-        
-        const percentageOptions = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 150, 1000];
-        
-        const contentTexts = {
-            10: "At 10% annual AI improvement, we're seeing steady but manageable technological advancement that presents <span class='investment-highlight'>selective opportunities</span> in established tech companies. This measured pace allows traditional industries to adapt gradually while creating value in AI-enhanced productivity tools. Investors can focus on <span class='investment-highlight'>blue-chip technology stocks</span> and diversified AI ETFs without significant disruption risk. The investment landscape remains relatively stable with clear winners emerging in enterprise software and automation sectors.",
-            
-            20: "With 20% yearly AI progress, we observe accelerating innovation that begins to reshape <span class='investment-highlight'>competitive landscapes</span> across industries. Early-stage AI companies gain significant traction while established players invest heavily in AI integration. This growth rate creates opportunities in <span class='investment-highlight'>AI infrastructure stocks</span> and companies pioneering machine learning applications. Portfolio diversification should include both AI pure-plays and traditional companies successfully adopting AI technologies.",
-            
-            30: "At 30% annual improvement, AI advancement becomes a major economic driver creating substantial <span class='investment-highlight'>market opportunities</span> and some sector volatility. Companies without AI strategies face increasing competitive pressure, while AI leaders experience rapid market share gains. Investment focus shifts toward <span class='investment-highlight'>AI-first companies</span> and businesses demonstrating clear AI-driven efficiency improvements. This pace suggests the beginning of significant industry consolidation and new market leader emergence.",
-            
-            40: "With 40% year-on-year AI growth, we enter a period of significant technological disruption that creates both <span class='investment-highlight'>massive opportunities and substantial risks</span>. Traditional business models face existential challenges while AI-native companies experience explosive growth. Strategic investment requires <span class='investment-highlight'>careful risk management</span> balanced with aggressive positioning in AI winners. Market volatility increases as investors recalibrate valuations based on AI capabilities rather than traditional metrics.",
-            
-            50: "At 50% annual AI improvement, we witness the emergence of transformative technologies that fundamentally alter <span class='investment-highlight'>entire industry structures</span>. Investment strategies must pivot toward companies positioned at the forefront of AI revolution while hedging against displacement risks. This growth rate suggests <span class='investment-highlight'>exponential value creation</span> in AI leaders coupled with accelerated obsolescence of laggards. Portfolio construction requires dynamic rebalancing and focus on adaptive companies with strong AI integration capabilities.",
-            
-            60: "With 60% yearly AI advancement, market dynamics shift dramatically as <span class='investment-highlight'>AI becomes the primary value driver</span> across most sectors. Traditional investment analysis gives way to AI capability assessment as the key metric for company valuation. Opportunities concentrate in <span class='investment-highlight'>AI infrastructure, data companies, and breakthrough applications</span> while defensive positions become crucial for risk management. This pace indicates we're approaching a technological singularity with profound investment implications.",
-            
-            70: "At 70% annual AI improvement, we enter uncharted territory where <span class='investment-highlight'>AI capabilities advance faster than market adaptation</span>. Investment opportunities become increasingly concentrated in companies building foundational AI technologies and those successfully navigating rapid change. Traditional sector analysis becomes less relevant as <span class='investment-highlight'>AI prowess determines winners</span> across all industries. Portfolio strategies must emphasize flexibility, liquidity, and exposure to transformative AI leaders while managing unprecedented volatility.",
-            
-            80: "With 80% year-on-year AI growth, technological advancement outpaces regulatory and social adaptation, creating <span class='investment-highlight'>extreme market concentration</span> in AI leaders. Investment success depends on identifying companies that can harness exponential AI improvements for competitive advantage. Risk management becomes paramount as <span class='investment-highlight'>disruption accelerates beyond historical precedent</span>. This growth rate suggests fundamental changes to economic structures and the emergence of AI-driven market dominance.",
-            
-            90: "At 90% annual AI improvement, we approach a technological inflection point where <span class='investment-highlight'>AI capabilities compound at revolutionary speeds</span>. Investment strategies must focus on companies positioned to benefit from or survive rapid AI-driven transformation. Traditional valuation models break down as <span class='investment-highlight'>AI advantage becomes the sole determinant</span> of long-term viability. Portfolio construction requires extreme selectivity and emphasis on companies with sustainable AI competitive moats.",
-            
-            100: "At 100% year-on-year AI improvement, we're witnessing a transformative inflection point that creates unprecedented <span class='investment-highlight'>investment opportunities</span> across multiple sectors. Companies leading AI development and integration are positioned for exponential growth, while traditional industries face both disruption risks and automation benefits. This growth rate suggests we're entering an era where <span class='investment-highlight'>AI-driven productivity gains</span> could fundamentally reshape market valuations and create entirely new investment categories. Strategic allocation to AI-focused funds and forward-thinking companies becomes not just opportunistic, but essential for long-term portfolio resilience.",
-            
-            110: "With 110% annual AI advancement, we witness exponential technological growth that creates <span class='investment-highlight'>winner-take-all market dynamics</span>. Investment opportunities become highly concentrated in breakthrough AI companies while traditional businesses face existential pressure. This pace suggests <span class='investment-highlight'>fundamental economic restructuring</span> where AI mastery determines market position. Portfolio strategies must balance aggressive AI exposure with careful risk management as market volatility reaches extreme levels.",
-            
-            120: "At 120% yearly AI improvement, technological progress exceeds most adaptation capabilities, creating <span class='investment-highlight'>unprecedented market opportunities</span> for those who can navigate the disruption. AI leaders gain insurmountable advantages while entire industries transform overnight. Investment focus must shift to <span class='investment-highlight'>foundational AI technologies and adaptive platforms</span> capable of leveraging exponential growth. This growth rate indicates we're entering a period of technological revolution with profound implications for all investment strategies.",
-            
-            150: "With 150% annual AI advancement, we enter a period of technological superintelligence emergence that fundamentally alters <span class='investment-highlight'>the nature of value creation</span>. Traditional investment frameworks become obsolete as AI capabilities transcend human comprehension. Opportunities focus on <span class='investment-highlight'>AI infrastructure and control mechanisms</span> while risk management requires entirely new approaches. This growth rate suggests we're approaching post-scarcity economics where conventional market rules may no longer apply.",
-            
-            1000: "At 1000% year-on-year AI improvement, we face technological advancement beyond current comprehension that creates <span class='investment-highlight'>paradigm-shifting opportunities</span> and risks. Investment strategies must prepare for post-human economic models where AI systems manage most value creation. The concept of traditional investing transforms as <span class='investment-highlight'>AI optimization surpasses human decision-making</span> in all domains. This extraordinary growth rate suggests we're on the threshold of technological singularity where current investment principles may become fundamentally irrelevant to wealth creation and preservation."
-        };
-        
         function updateContent() {
-            const sliderValue = parseInt(slider.value);
-            const percentage = percentageOptions[sliderValue];
-            
-            percentageDisplay.textContent = percentage + '%';
-            percentageInTitle.textContent = percentage + '%';
-            
-            // Add fade effect
-            contentParagraph.style.opacity = '0';
-            
-            setTimeout(() => {
-                contentParagraph.innerHTML = contentTexts[percentage];
-                contentParagraph.style.opacity = '1';
-                contentParagraph.classList.add('fade-in');
-                
-                setTimeout(() => {
-                    contentParagraph.classList.remove('fade-in');
-                }, 500);
-            }, 200);
+            const value = parseInt(smoothSlider.value);
+            percentageDisplay.textContent = value + '%';
+            percentageInTitle.textContent = value;
+            // Only update paragraph at each stop
+            const stop = getCurrentStop(value);
+            contentParagraph.innerHTML = contentTexts[stop];
         }
-        
-        slider.addEventListener('input', updateContent);
-        
-        // Initialize with default value
+        smoothSlider.addEventListener('input', updateContent);
         updateContent();
     </script>
 </body>
